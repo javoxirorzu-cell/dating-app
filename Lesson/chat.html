@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luvora - Chats</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="chat-page">
+  <header>
+    <div class="brand">
+      <div class="logo-dot"></div>
+      <div>
+        <div class="eyebrow">Luvora</div>
+        <div class="muted">Keep the conversations flowing</div>
+      </div>
+    </div>
+    <div class="top-links">
+      <a href="app.html" class="pill">Home</a>
+      <a href="search.html" class="pill">Search</a>
+      <a href="profile.html" class="pill">Profile</a>
+    </div>
+  </header>
+
+  <main class="center">
+    <div class="chat-shell card">
+      <div class="chat-layout">
+        <div class="chat-list">
+          <div class="stack-head">
+            <div>
+              <p class="eyebrow">Matches</p>
+              <h3>Who liked you</h3>
+            </div>
+          </div>
+          <div id="matches" class="list"></div>
+        </div>
+
+        <div class="chat-pane">
+          <div class="chat-window empty" id="chatEmpty">
+            <div class="muted">Pick someone on the left to start chatting.</div>
+          </div>
+          <div class="chat-window" id="chatBox" style="display:none;">
+            <div class="chat-header">
+              <div>
+                <p class="eyebrow">Chatting with</p>
+                <h3 id="chatName"></h3>
+              </div>
+            </div>
+            <div id="messages" class="chat-messages"></div>
+            <div class="chat-input">
+              <input id="msgInput" placeholder="Type a message">
+              <button onclick="sendMessage()">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    requireAuth();
+    loadMatches();
+  </script>
+</body>
+</html>

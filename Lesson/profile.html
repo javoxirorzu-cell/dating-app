@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luvora - Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="profile-page">
+  <header>
+    <div class="brand">
+      <div class="logo-dot"></div>
+      <div>
+        <div class="eyebrow">Luvora</div>
+        <div class="muted">Craft a profile worth swiping</div>
+      </div>
+    </div>
+    <div class="top-links">
+      <a href="app.html" class="pill">Home</a>
+      <a href="search.html" class="pill">Search</a>
+      <a href="chat.html" class="pill">Chats</a>
+    </div>
+  </header>
+
+  <main class="center">
+    <div class="profile-shell card">
+      <div class="profile-header">
+        <div class="avatar-wrap">
+          <img id="avatar" src="https://i.pravatar.cc/220" alt="Avatar">
+          <label class="upload-btn">
+            Upload
+            <input type="file" id="photoInput" accept="image/*">
+          </label>
+        </div>
+        <div>
+          <p class="eyebrow">Profile strength</p>
+          <h2>Your dating card</h2>
+          <p class="muted">Add clear info so the Tinder-style deck can shine.</p>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" placeholder="Name">
+        </div>
+        <div class="field">
+          <label for="age">Age</label>
+          <input id="age" type="number" min="18" max="80" placeholder="Age">
+        </div>
+        <div class="field">
+          <label for="country">Country</label>
+          <input id="country" placeholder="Country (locked to registration)" disabled>
+        </div>
+        <div class="field full">
+          <label for="bio">About</label>
+          <textarea id="bio" placeholder="Short bio"></textarea>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <button onclick="saveProfile()">Save profile</button>
+        <a class="ghost pill-btn" href="app.html">Back</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    requireAuth();
+    loadProfileData();
+  </script>
+</body>
+</html>

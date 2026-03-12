@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luvora - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+  <header>
+    <div class="brand">
+      <div class="logo-dot"></div>
+      <div>
+        <div class="eyebrow">Luvora</div>
+        <div class="muted">Swipe like Tinder. Feel like Luvora.</div>
+      </div>
+    </div>
+    <div class="top-links">
+      <a href="search.html" class="pill">Search</a>
+      <a href="chat.html" class="pill">Chats</a>
+      <a href="profile.html" class="pill">Profile</a>
+    </div>
+  </header>
+
+  <main class="center">
+    <div class="home-shell">
+      <section class="card hero-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Today on Luvora</p>
+          <h1 class="hero-title">Swipe smarter. Match faster.</h1>
+          <p class="muted">A crisp Tinder-style deck with your best picks. Manage everything from one dashboard.</p>
+          <div class="cta-row">
+            <a class="btn" href="search.html">Open search</a>
+            <a class="ghost pill-btn" href="profile.html">Edit profile</a>
+          </div>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="stat-num" id="statTotal">--</div>
+              <div class="muted">people nearby</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Instant</div>
+              <div class="muted">filters by age/city</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-deck">
+          <div id="homeProfiles" class="deck-stack"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="stack-head">
+          <div>
+            <p class="eyebrow">Navigation</p>
+            <h3>Everything in one tap</h3>
+          </div>
+          <button class="ghost small" onclick="localStorage.removeItem('luv_auth'); window.location='login.html';">Log out</button>
+        </div>
+        <div class="nav-grid big">
+          <a class="nav-card" href="search.html">Discover</a>
+          <a class="nav-card" href="chat.html">Messages</a>
+          <a class="nav-card" href="profile.html">Profile</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    requireAuth();
+    populateHome();
+  </script>
+</body>
+</html>

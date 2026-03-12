@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luvora • Search</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="search-page">
+  <header>
+    <div class="brand">
+      <div class="logo-dot"></div>
+      <div>
+        <div class="eyebrow">Luvora</div>
+        <div class="muted">Swipe into real connections</div>
+      </div>
+    </div>
+    <div class="top-links">
+      <a href="app.html" class="pill">Home</a>
+      <a href="chat.html" class="pill">Chats</a>
+      <a href="profile.html" class="pill">Profile</a>
+    </div>
+  </header>
+
+  <main class="center">
+    <div class="search-shell">
+      <div class="search-hero card">
+        <div>
+          <p class="eyebrow">Discovery</p>
+          <h1 class="hero-title">Find your next match</h1>
+          <p class="muted">Tinder-inspired deck with filters by name, city, country, and age. Type or tap a chip to jump in.</p>
+        </div>
+        <div class="chip-row" id="quickChips">
+          <button class="chip" data-city="Paris">Paris</button>
+          <button class="chip" data-city="Berlin">Berlin</button>
+          <button class="chip" data-city="Seoul">Seoul</button>
+          <button class="chip" data-country="USA">USA</button>
+          <button class="chip" data-country="Mexico">Mexico</button>
+        </div>
+
+        <div class="filter-grid">
+          <div class="field">
+            <label for="searchName">Name</label>
+            <input id="searchName" type="text" placeholder="Type a name..." />
+          </div>
+          <div class="field">
+            <label for="searchCity">City</label>
+            <input id="searchCity" type="text" placeholder="Any city" />
+          </div>
+          <div class="field">
+            <label for="searchCountry">Country</label>
+            <input id="searchCountry" type="text" placeholder="Any country" />
+          </div>
+          <div class="field age-field">
+            <label>Age range</label>
+            <div class="age-range">
+              <input id="ageMin" type="number" min="18" max="80" placeholder="Min" />
+              <input id="ageMax" type="number" min="18" max="80" placeholder="Max" />
+            </div>
+          </div>
+          <div class="field action-field">
+            <label>&nbsp;</label>
+            <button type="button" onclick="searchUsers()">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card swipe-hero">
+        <div class="stack-head">
+          <div>
+            <p class="eyebrow">Quick swipe</p>
+            <h3>Like or pass in two taps</h3>
+          </div>
+          <div class="muted" id="swipeCounter"></div>
+        </div>
+        <div class="swipe-deck">
+          <div id="swipeCard" class="swipe-card"></div>
+          <div class="swipe-actions">
+            <button class="ghost round" onclick="swipe('pass')">Pass</button>
+            <button class="like-btn round" onclick="swipe('like')">Like</button>
+          </div>
+        </div>
+        <div class="peek-row" id="swipePeek"></div>
+      </div>
+
+      <div class="card swipe-stack">
+        <div class="stack-head">
+          <div>
+            <p class="eyebrow">Results</p>
+            <h3>Curated cards</h3>
+          </div>
+          <div class="muted" id="resultCount"></div>
+        </div>
+        <div id="searchResults" class="card-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    requireAuth();
+  </script>
+</body>
+</html>

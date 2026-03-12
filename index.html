@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luvora - Register</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page center">
+  <div class="auth-card card">
+    <div class="auth-head">
+      <div class="logo-dot"></div>
+      <div>
+        <p class="eyebrow">Luvora</p>
+        <h2>Create your account</h2>
+        <p class="muted">Fast onboarding, Tinder-grade UI.</p>
+      </div>
+    </div>
+
+    <input id="regEmail" type="email" placeholder="Email">
+    <input id="regPass" type="password" placeholder="Password">
+    <input id="regCountry" list="countryList" placeholder="Your country (locked to your profile)">
+    <datalist id="countryList">
+      <option value="USA">
+      <option value="United Kingdom">
+      <option value="Canada">
+      <option value="Germany">
+      <option value="France">
+      <option value="Spain">
+      <option value="Italy">
+      <option value="Mexico">
+      <option value="Brazil">
+      <option value="Argentina">
+      <option value="Japan">
+      <option value="South Korea">
+      <option value="China">
+      <option value="India">
+      <option value="Australia">
+      <option value="New Zealand">
+      <option value="South Africa">
+      <option value="Nigeria">
+      <option value="Kenya">
+      <option value="UAE">
+      <option value="Saudi Arabia">
+    </datalist>
+
+    <button onclick="register()">Create account</button>
+
+    <p class="muted" style="margin-top:12px;">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

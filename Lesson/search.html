@@ -12,14 +12,15 @@
     <div class="brand">
       <div class="logo-dot"></div>
       <div>
-        <div class="eyebrow">Luvora</div>
-        <div class="muted">Swipe into real connections</div>
+        <div class="eyebrow" id="brandName">Luvora</div>
+        <div class="muted" id="headerTagline">Swipe into real connections</div>
       </div>
     </div>
     <div class="top-links">
       <a href="app.html" class="pill">Home</a>
       <a href="chat.html" class="pill">Chats</a>
       <a href="profile.html" class="pill">Profile</a>
+          <a href="editor.html" class="pill">Editor</a>
     </div>
   </header>
 
@@ -64,6 +65,43 @@
             <button type="button" onclick="searchUsers()">Search</button>
           </div>
         </div>
+
+        <div class="preference-grid">
+          <div class="field">
+            <label for="prefAgeMin">Preferred min age</label>
+            <input id="prefAgeMin" type="number" min="18" max="80" placeholder="22" />
+          </div>
+          <div class="field">
+            <label for="prefAgeMax">Preferred max age</label>
+            <input id="prefAgeMax" type="number" min="18" max="80" placeholder="32" />
+          </div>
+          <div class="field">
+            <label for="prefVibe">Preferred vibe</label>
+            <select id="prefVibe">
+              <option>Any</option>
+              <option>Romantic</option>
+              <option>Adventurous</option>
+              <option>Creative</option>
+              <option>Calm</option>
+              <option>Social</option>
+              <option>Ambitious</option>
+              <option>Energetic</option>
+            </select>
+          </div>
+          <div class="field action-field">
+            <label for="sortBy">Sort by</label>
+            <select id="sortBy">
+              <option value="score">Best match score</option>
+              <option value="age">Age</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+          <label class="switcher">
+            <input type="checkbox" id="verifiedOnly" />
+            <span>Show verified profiles only</span>
+          </label>
+        </div>
+
       </div>
 
       <div class="card swipe-hero">
@@ -101,5 +139,6 @@
   <script>
     requireAuth();
   </script>
+  <div id="toastHost" class="toast-host"></div>
 </body>
 </html>

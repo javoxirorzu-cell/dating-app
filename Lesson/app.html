@@ -12,8 +12,8 @@
     <div class="brand">
       <div class="logo-dot"></div>
       <div>
-        <div class="eyebrow">Luvora</div>
-        <div class="muted">Swipe like Tinder. Feel like Luvora.</div>
+        <div class="eyebrow" id="brandName">Luvora</div>
+        <div class="muted" id="headerTagline">Swipe like Tinder. Feel like Luvora.</div>
       </div>
     </div>
     <div class="top-links">
@@ -28,8 +28,8 @@
       <section class="card hero-band">
         <div class="hero-copy">
           <p class="eyebrow">Today on Luvora</p>
-          <h1 class="hero-title">Swipe smarter. Match faster.</h1>
-          <p class="muted">A crisp Tinder-style deck with your best picks. Manage everything from one dashboard.</p>
+          <h1 class="hero-title" id="homeHeroTitle">Swipe smarter. Match faster.</h1>
+          <p class="muted" id="homeHeroSubtitle">A crisp Tinder-style deck with your best picks. Manage everything from one dashboard.</p>
           <div class="cta-row">
             <a class="btn" href="search.html">Open search</a>
             <a class="ghost pill-btn" href="profile.html">Edit profile</a>
@@ -62,6 +62,7 @@
           <a class="nav-card" href="search.html">Discover</a>
           <a class="nav-card" href="chat.html">Messages</a>
           <a class="nav-card" href="profile.html">Profile</a>
+          <a class="nav-card" href="editor.html">Online editor</a>
         </div>
       </section>
     </div>
@@ -72,5 +73,6 @@
     requireAuth();
     populateHome();
   </script>
+  <div id="toastHost" class="toast-host"></div>
 </body>
 </html>

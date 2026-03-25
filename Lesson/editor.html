@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luvora - Online Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="editor-page">
+  <header>
+    <div class="brand">
+      <div class="logo-dot"></div>
+      <div>
+        <div class="eyebrow">Luvora</div>
+        <div class="muted">Online customization panel</div>
+      </div>
+    </div>
+    <div class="top-links">
+      <a href="app.html" class="pill">Home</a>
+      <a href="search.html" class="pill">Search</a>
+      <a href="profile.html" class="pill">Profile</a>
+    </div>
+  </header>
+
+  <main class="center">
+    <div class="editor-shell card">
+      <div class="stack-head">
+        <div>
+          <p class="eyebrow">Live website editor</p>
+          <h2>Редактируй сайт прямо в браузере</h2>
+          <p class="muted">Меняй бренд, тексты и цвета без VS Code. Нажми Save и сразу открой Home/Search.</p>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="cfgBrand">Brand name</label>
+          <input id="cfgBrand" placeholder="Luvora">
+        </div>
+        <div class="field">
+          <label for="cfgTagline">Header tagline</label>
+          <input id="cfgTagline" placeholder="Swipe like Tinder. Feel like Luvora.">
+        </div>
+        <div class="field full">
+          <label for="cfgHeroTitle">Home hero title</label>
+          <input id="cfgHeroTitle" placeholder="Swipe smarter. Match faster.">
+        </div>
+        <div class="field full">
+          <label for="cfgHeroSub">Home hero subtitle</label>
+          <textarea id="cfgHeroSub" placeholder="Short subtitle"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="cfgAccent">Accent color</label>
+          <input id="cfgAccent" type="color" value="#ff6b81">
+        </div>
+        <div class="field">
+          <label for="cfgAccent2">Accent 2 color</label>
+          <input id="cfgAccent2" type="color" value="#ffa351">
+        </div>
+        <div class="field">
+          <label for="cfgBg">Background color</label>
+          <input id="cfgBg" type="color" value="#0c0f16">
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <button onclick="saveSiteConfig()">Save changes</button>
+        <button class="ghost" onclick="resetSiteConfig()">Reset default</button>
+        <a class="pill-btn ghost" href="app.html">Back to app</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    requireAuth();
+    initEditorForm();
+  </script>
+  <div id="toastHost" class="toast-host"></div>
+</body>
+</html>

@@ -12,14 +12,15 @@
     <div class="brand">
       <div class="logo-dot"></div>
       <div>
-        <div class="eyebrow">Luvora</div>
-        <div class="muted">Keep the conversations flowing</div>
+        <div class="eyebrow" id="brandName">Luvora</div>
+        <div class="muted" id="headerTagline">Keep the conversations flowing</div>
       </div>
     </div>
     <div class="top-links">
       <a href="app.html" class="pill">Home</a>
       <a href="search.html" class="pill">Search</a>
       <a href="profile.html" class="pill">Profile</a>
+          <a href="editor.html" class="pill">Editor</a>
     </div>
   </header>
 
@@ -63,5 +64,6 @@
     requireAuth();
     loadMatches();
   </script>
+  <div id="toastHost" class="toast-host"></div>
 </body>
 </html>

@@ -57,6 +57,20 @@
           <label for="bio">About</label>
           <textarea id="bio" placeholder="Short bio"></textarea>
         </div>
+
+        <div class="field">
+          <label for="goal">Relationship goal</label>
+          <select id="goal">
+            <option>Long-term relationship</option>
+            <option>Dating</option>
+            <option>Serious commitment</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="interests">Interests (comma separated)</label>
+          <input id="interests" placeholder="Travel, gym, books, music">
+        </div>
+
       </div>
 
       <div class="cta-row">
@@ -71,5 +85,6 @@
     requireAuth();
     loadProfileData();
   </script>
+  <div id="toastHost" class="toast-host"></div>
 </body>
 </html>
